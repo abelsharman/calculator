@@ -72,12 +72,12 @@ p{
     }
     .calculator_buttons button{
         border-radius: 60px;
-        font-size: 30px;
+        font-size: 10vw;
         height: 21.8vw;
         width: 21.8vw;
         margin: 0px 1vw 10px 0;
     }
     .calculator_buttons .long{
-        width: 44vw;
+        width: 45vw;
     }
 }
