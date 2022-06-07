@@ -11,28 +11,28 @@
     <div id="app">
         <div class="calculator">
             <div class="result">
-                <p v-text="result.toLocaleString('KZ-kz')"></p>
+                <p v-text="resultLocale"></p>
             </div>
             <div class="calculator_buttons">
-                <button class="grey" v-text="expression.length == 0 ? 'AC' : 'C'"></button>
-                <button class="grey">+,-</button>
-                <button class="grey">%</button>
-                <button class="yellow">/</button>
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button class="yellow">x</button>
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button class="yellow">-</button>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button class="yellow">+</button>
-                <button class="long">0</button>
-                <button>,</button>
-                <button class="yellow">=</button>
+                <button @click="cancel" class="grey" :key="expression" v-text="expression.length == 0 ? 'AC' : 'C'"></button>
+                <button @click="change" class="grey">+,-</button>
+                <button @click="disable" class="grey">%</button>
+                <button @click="oper('/')" :class="{ yellow: true, button_clicked: now_oper == '/' }">/</button>
+                <button @click="add(7)">7</button>
+                <button @click="add(8)">8</button>
+                <button @click="add(9)">9</button>
+                <button @click="oper('*')" :class="{ yellow: true, button_clicked: now_oper == '*' }">x</button>
+                <button @click="add(4)">4</button>
+                <button @click="add(5)">5</button>
+                <button @click="add(6)">6</button>
+                <button @click="oper('-')" :class="{ yellow: true, button_clicked: now_oper == '-' }">-</button>
+                <button @click="add(1)">1</button>
+                <button @click="add(2)">2</button>
+                <button @click="add(3)">3</button>
+                <button @click="oper('+')" :class="{ yellow: true, button_clicked: now_oper == '+' }">+</button>
+                <button @click="add(0)" class="long">0</button>
+                <button @click="add(',')">,</button>
+                <button @click="equalize" class="yellow">=</button>
             </div>
         </div>
     </div>

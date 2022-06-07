@@ -55,6 +55,10 @@ p{
 .calculator_buttons .yellow:hover{
     background-color: rgb(240, 160, 20);
 }
+.calculator_buttons .button_clicked{
+    background-color: #FFF;
+    color: rgb(220, 140, 0);
+}
 .calculator_buttons .long{
     width: 142px;
 }
