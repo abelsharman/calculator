@@ -119,6 +119,7 @@ body{
     font-family: 'Roboto', sans-serif;
     color: #fff;
 }
+button { padding: 0; }
 p{
     margin: 0;
     font-weight: 100;
